@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <cstdlib>
 #include "songs.h"
 
 
@@ -154,6 +155,8 @@ int main () {
     std::cout << "End of program." << std::endl;
     std::cout << std::endl;
 
+    // pauses so terminal doesn't instantly close
+    system("pause");
     return 0;
 }
 
