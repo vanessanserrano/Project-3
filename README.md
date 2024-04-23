@@ -28,3 +28,7 @@ If `main.exe` does not run, you may need to recompile it:
    - This should create `main.exe` in the Spotify Sorter folder, NOT in the `src` folder.
 3. **Run the Program**:
    - Execute `main.exe` as described above.
+
+## Note
+
+- **Windows Specific**: The use of `system("pause")` is specific to Windows and may cause undefined behavior on macOS or other non-Windows systems. We recommended running this in an IDE or terminal that supports this command.
