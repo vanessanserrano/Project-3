@@ -16,7 +16,7 @@ int main () {
     // initialize song list
     list.initialize(filename);
 
-    //prints spotify in cute font
+    //prints spotify in cute font at the beginning of the program
     std::cout << std::endl;
     std::cout << "  SSS  PPPP   OO0 TTTTTTT III  FFFFF  Y   Y\n";
     std::cout << " S     P   P O   O   T     I   F       Y Y \n";
@@ -24,7 +24,7 @@ int main () {
     std::cout << "     S P     O   O   T     I   F        Y  \n";
     std::cout << "  SSS  P      OOO    T    III  F        Y   \n";
 
-    // ask user what sort they want
+    // ask user which sort they want to use
     std::string sort_type;
     std::cout << std::endl;
     std::cout << "What sort would you like to use?" << std::endl;
@@ -32,7 +32,7 @@ int main () {
     std::cout << "Enter a number: ";
     std::cin >> sort_type;
 
-    // checks for valid input from user for sort_type and allows user to try again
+    // checks for valid input from user for sort_type and allows user to try again if input is invalid
     while(sort_type!="1" && sort_type != "2"){
         std:: cout << "Invalid Input :(( try again" << std::endl;
         std::cout << "Enter a number: ";
@@ -41,7 +41,7 @@ int main () {
 
     std::cout << std::endl; // skips a line
 
-    // ask user what variable they would like to sort by
+    // ask user what category they would like to sort the songs by
     std::string sort_by;
     std::cout << "What would you like to sort the songs by?" << std::endl;
     std::cout << "1. Track Popularity" << std::endl;
@@ -60,7 +60,7 @@ int main () {
     std::cout << "Enter a number: ";
     std::cin >> sort_by;
 
-    // checks for valid input from user for sort_by and allows user to try again
+    // checks for valid input from user for sort_by and allows user to try again if input is invalid
     while(sort_by != "1" && sort_by != "2" && sort_by != "3" && sort_by != "4" && sort_by != "5" && sort_by != "6"
     && sort_by !="7" && sort_by != "8" && sort_by != "9" && sort_by != "10" && sort_by != "11" && sort_by != "12" &&
     sort_by != "13"){
@@ -71,7 +71,7 @@ int main () {
 
     std::cout << std::endl; // skips a line
 
-    // asks user if they want to sort by ascending or descending
+    // asks user if they want to sort by ascending or descending order
     std::string sort_order;
     std::cout << "Would you like to sort by:" << std::endl;
     std::cout << "1. Ascending order" << std::endl;
@@ -79,7 +79,7 @@ int main () {
     std::cout << "Enter a number: ";
     std::cin >> sort_order;
 
-    // checks for valid input and allows user to try again
+    // checks for valid input and allows user to try again if input is invalid
     while(sort_order!="1" && sort_order != "2"){
         std:: cout << "Invalid Input :(( try again" << std::endl;
         std::cout << "Enter a number: ";
@@ -111,7 +111,7 @@ int main () {
             ascending = false;
         }
 
-        // sorts and times it
+        // sorts and times how long the sort takes
         auto start = std::chrono::high_resolution_clock::now();
         list.sort(sort_type, sort_criteria, ascending);
         auto stop = std::chrono::high_resolution_clock::now();
