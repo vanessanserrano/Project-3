@@ -16,7 +16,7 @@ int main () {
     // initialize song list
     list.initialize(filename);
 
-    //prints spotify
+    //prints spotify in cute font
     std::cout << std::endl;
     std::cout << "  SSS  PPPP   OO0 TTTTTTT III  FFFFF  Y   Y\n";
     std::cout << " S     P   P O   O   T     I   F       Y Y \n";
@@ -32,7 +32,7 @@ int main () {
     std::cout << "Enter a number: ";
     std::cin >> sort_type;
 
-    // checks for valid input
+    // checks for valid input from user for sort_type and allows user to try again
     while(sort_type!="1" && sort_type != "2"){
         std:: cout << "Invalid Input :(( try again" << std::endl;
         std::cout << "Enter a number: ";
@@ -60,7 +60,7 @@ int main () {
     std::cout << "Enter a number: ";
     std::cin >> sort_by;
 
-    // checks for valid input
+    // checks for valid input from user for sort_by and allows user to try again
     while(sort_by != "1" && sort_by != "2" && sort_by != "3" && sort_by != "4" && sort_by != "5" && sort_by != "6"
     && sort_by !="7" && sort_by != "8" && sort_by != "9" && sort_by != "10" && sort_by != "11" && sort_by != "12" &&
     sort_by != "13"){
@@ -79,7 +79,7 @@ int main () {
     std::cout << "Enter a number: ";
     std::cin >> sort_order;
 
-    // checks for valid input
+    // checks for valid input and allows user to try again
     while(sort_order!="1" && sort_order != "2"){
         std:: cout << "Invalid Input :(( try again" << std::endl;
         std::cout << "Enter a number: ";
